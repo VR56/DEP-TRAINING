@@ -17,7 +17,7 @@ function prefill(n, v) {
             flag = true;
         }
     }
-    if (flag === false) {
+    if (!flag) {
         throw new TypeError(errorMessage);
     }
     var arrayToReturn = new Array(n);
