@@ -4,9 +4,9 @@
 //http://www.codewars.com/kata/function-cache// Solution
 
 function cache(func) {
-    var cache = {};
+    const cache = {};
     return function(...args) {
-        let myCache = JSON.stringify(args);
+        const myCache = JSON.stringify(args);
         if (!cache.hasOwnProperty(myCache)) {
             cache[myCache] = func(...args);
         }

@@ -5,16 +5,8 @@
 // Solution
 
 function createSecretHolder(secret) {
-
-    let objectToReturn = {
-
-        getSecret: function() {
-            return secret;
-        },
-
-        setSecret: function(value) {
-            secret = value;
-        }
+    return {
+        getSecret: () => secret,
+        setSecret: (value) => secret = value
     };
-    return objectToReturn;
 }

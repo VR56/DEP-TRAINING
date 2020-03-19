@@ -6,9 +6,10 @@
 // Solution
 
 function isSantaClausable(obj) {
+    const comparer = "function";
     return (
-        (typeof obj.sayHoHoHo === 'function') &&
-        (typeof obj.distributeGifts === 'function') &&
-        (typeof obj.goDownTheChimney === 'function')
+        (typeof obj.sayHoHoHo === comparer) &&
+        (typeof obj.distributeGifts === comparer) &&
+        (typeof obj.goDownTheChimney === comparer)
     );
 }

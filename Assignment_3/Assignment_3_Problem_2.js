@@ -4,8 +4,4 @@
 // http://www.codewars.com/kata/a-function-within-a-function
 // Solution
 
-function always(n) {
-    return function() {
-        return n;
-    }
-}
+always = (n) => (() => n);

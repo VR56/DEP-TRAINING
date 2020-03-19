@@ -6,28 +6,25 @@
 
 function prefill(n, v) {
 
-    var flag = true;
-    var errorMessage = n + " is invalid";
+    let flag = false;
+    let errorMessage = `${n} is invalid`;
     if (typeof(n) === 'number') {
-        if (Number.isInteger(n) == false || Math.sign(n) === -1) {
-            flag = false;
+        if ((Number.isInteger(n) === true && Math.sign(n) === 1) || n === 0) {
+            flag = true;
         }
     } else if (typeof(n) === 'string') {
-        if (+n === NaN || Number.isInteger(+n) === false) {
-            flag = false;
+        if (n === '0') {
+            flag = true;
         }
-    } else {
-        flag = false;
     }
-
-    if (flag == false) {
+    if (flag === false) {
         throw new TypeError(errorMessage);
     }
     var arrayToReturn = new Array(n);
 
     if (n === 0 || n === '0') {
         arrayToReturn = [];
-    } else if (arguments[1] === null) {
+    } else if (v === null) {
         arrayToReturn.fill(undefined);
     } else {
         arrayToReturn.fill(v);

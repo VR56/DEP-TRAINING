@@ -5,7 +5,7 @@
 // Solution
 
 function add(firstOperand) {
-    let curry = (secondOperand) => {
+    const curry = (secondOperand) => {
         firstOperand += secondOperand;
         return curry;
     }
